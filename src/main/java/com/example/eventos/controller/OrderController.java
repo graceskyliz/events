@@ -1,5 +1,7 @@
-package com.example.eventos;
+package com.example.eventos.controller;
 
+import com.example.eventos.model.OrderRequest;
+import com.example.eventos.service.OrderService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

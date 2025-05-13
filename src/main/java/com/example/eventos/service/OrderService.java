@@ -1,5 +1,6 @@
-package com.example.eventos;
+package com.example.eventos.service;
 
+import com.example.eventos.model.OrderRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

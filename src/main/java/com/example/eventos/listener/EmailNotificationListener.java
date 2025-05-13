@@ -1,5 +1,7 @@
-package com.example.eventos;
+package com.example.eventos.listener;
 
+import com.example.eventos.model.OrderRequest;
+import com.example.eventos.service.OrderListener;
 import org.springframework.stereotype.Component;
 
 @Component
