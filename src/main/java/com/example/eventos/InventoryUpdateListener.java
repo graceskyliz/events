@@ -1,15 +1,14 @@
 package com.example.eventos;
 
-
-import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
 @Component
-public class InventoryUpdateListener {
+public class InventoryUpdateListener implements OrderListener {
 
-    @EventListener
-    public void handleOrderCreated(OrderCreatedEvent event) {
-        System.out.println("Reduciendo stock del producto: " + event.getProducto());
+    @Override
+    public void onOrderCreated(OrderRequest order) {
+        System.out.println("Reduciendo stock del producto: " + order.getProducto());
     }
 }
+
 

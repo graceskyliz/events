@@ -1,16 +1,18 @@
 package com.example.eventos;
 
-import org.springframework.context.event.EventListener;
+
+import com.example.eventos.OrderListener;
+import com.example.eventos.OrderRequest;
 import org.springframework.stereotype.Component;
 
 @Component
-public class AuditLogListener {
+public class AuditLogListener implements OrderListener {
 
-    @EventListener
-    public void handleOrderCreated(OrderCreatedEvent event) {
-        System.out.println("Registrando en logs el pedido: ID=" + event.getId()
-                + ", Email=" + event.getEmail()
-                + ", Producto=" + event.getProducto());
+    @Override
+    public void onOrderCreated(OrderRequest order) {
+        System.out.println(" Registrando en logs el pedido: ID=" + order.getId()
+                + ", Email=" + order.getEmail()
+                + ", Producto=" + order.getProducto());
     }
 }
 
